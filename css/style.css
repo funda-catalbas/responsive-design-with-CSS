@@ -2,10 +2,8 @@
     font-family: serif;
 }
 
-
 header {
     width: 100%;
-
 }
 
 .logoContainer img {
@@ -14,120 +12,210 @@ header {
 }
 
 .navbar-brand {
-    margin-right: auto;
-    margin-left: 30px;
+    margin-left: 10px;
+    justify-content: left; 
 }
 
-.resimSlider {
-    height: 600px;
-    padding-top: 75px;
-    margin-bottom: 0 px;
-
-}
-
-body {
-    padding: 10px;
-    height: auto;
-    width: 100%;
-    
-}
-
-.hakkimizda {
-    background-color: antiquewhite;
-    margin: auto;
-    margin-top: 10px;
-}
-
-.ayrac {
-    border: none;
-    border-top: 5px solid darkred;
-    max-width: 250px;
-    margin: 25px auto;
-}
-
-.ibeyaz {
-    color: darkred;
-    position: relative;
-    top: -60px;
-    font-size: 40px;
-    border: 10px solid antiquewhite;
-    background-color: antiquewhite;
-}
-
-.igri {
-    color: darkred;
-    position: relative;
-    top: -60px;
-    font-size: 40px;
-    border: 10px solid white;
-    background-color: white;
-}
-
-.card {
-    height: 300px;
-}
-
-.ürüncard {
-    display: flex;
-    height: auto;
+.layout-card-container { 
+    display: grid;
+    gap: 1rem;  
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 20px;
+    cursor: pointer;
 }
 
-.ürüncard > img:hover {
-    opacity: 0.8;
-}
-
-.galeri {
-    background-color: antiquewhite;
-    width: 100%;
-}
-
-
-.figure-img img{
-    width: 280 px;
-    height: 280px;
-    margin: auto;
-    
-}
-
-.rowGal{
-    column-width: auto;
+.card {  
+    height: 11rem;
+    border-radius: 5px;
     display: flex;
-   
+    justify-content: space-between;
+    padding: 10px;
 }
 
-.figure-img:hover {
-    opacity: 0.8;
+.layout-card-container div.card:nth-child(1){
+    background-color: #C3F8FF;
 }
 
-.rowimg{
-    display: inline-block;
-    height: 280px;
+.layout-card-container div.card:nth-child(2){
+    background-color: #FFF6BD;
+}
+
+.layout-card-container div.card:nth-child(3){
+    background-color: #CEEDC7;
+}
+
+.layout-card-container div.card:nth-child(4){
+    background-color: #FFD4B2;
+}
+
+.cardTitle {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-value p {
+    margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.layout-columns {
+    display: grid;
+    margin: 20px;
+    grid-template-columns: 3fr 1fr;
+    gap: 1rem;
+}
+
+.profile {
+    border: 1px solid darkred;
+    height: 100%;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    height: 100%;
+    margin-top: 70px;
+}
+
+.layout-sidebar {
+    margin-left: 20px;
+    background-color: #FA7070;
+    color: black;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.layout-sidebar div {
+    margin-bottom: 10px; 
+}
+
+.layout-sidebar div p {
+    margin-bottom: 5px;
+}
+
+.sidebarTitle{
+    padding-left: 10px;
+    font-size: medium;
+    font-weight: bolder; 
+}
+
+
+table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
     width: 100%;
+    color: black;
+}
+  
+  table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;   
+}
+  
+  table tr:nth-child(even){background-color:#FFD4B2;}
+  
+  table tr:hover {background-color: #ddd;
+    cursor: pointer;}
+
+  
+  table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #FA7070;
+    color: black;
+    font-weight: 500px;
+  }
+
+  input[type=submit]{
+    background-color: #FA7070;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    width: 150px;
+    margin-left: 80px;
 }
 
-#iletisim input{
-    width: 80%;
-    margin: 30;
-    float: right;
+footer {
+    width: 100%;
+    height: auto;
+    background-color: #ABD9FF;
+    padding-left: 50px;
+    color: black; 
+    text-decoration: none;
+}
+
+
+/* Tablet */
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  
+
+.layout-card-container {
+    gap: 1rem;  
+    grid-template-columns: 1fr 1fr;
+    border-radius: 5px;
+}
+
+.layout-columns {
+    grid-template-columns: 1fr;
+}
+
+.profile {
+    order: 1;
+}
+
+.layout-table {
+    order: 2;
+}
+
+.layout-sidebar {
+     display: none;
+}
+
+.layout {
+    grid-template-columns: 1fr;
+    height: 100%;  
+}
+
+}
+
+
+/*Mobil*/
+@media only screen and (max-width: 600px) {
+  
+
+.layout-card-container {
+    gap: 1rem;  
+    grid-template-columns: 1fr;
+}
+
+.layout-header-right {
+    display: none;
+}
+
+.layout-columns {
+    grid-template-columns: 1fr;
+}
     
-    }
-
-label{
-    padding: 12px 12px 12px 0;
-    display: inline-block;
+.profile {
+    order: 1;
 }
 
-
-.mesajiniz{
-    height: 80px;
+.layout-table {
+    order: 2;
 }
 
-button[type=submit]{
-    background-color: darkred;
-    color: white;
-    float: left;
-    width: 100px;
-    margin-left: 50px;
-    
+.layout-sidebar {
+     display: none;
+}
+
+.layout {
+    grid-template-columns: 1fr;
+    height: 100%;   
+}
+
 }
